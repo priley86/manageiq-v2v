@@ -32,6 +32,8 @@ class Overview extends React.Component {
       fetchTransformationMappingsAction,
       fetchTransformationPlansUrl,
       fetchTransformationPlansAction,
+      fetchServiceTemplateAnsiblePlaybooksAction,
+      fetchServiceTemplateAnsiblePlaybooksUrl,
       fetchNetworksUrl,
       fetchNetworksAction,
       fetchDatastoresUrl,
@@ -43,6 +45,7 @@ class Overview extends React.Component {
     fetchProvidersAction();
     fetchClustersAction(fetchClustersUrl);
     fetchTransformationMappingsAction(fetchTransformationMappingsUrl);
+    fetchServiceTemplateAnsiblePlaybooksAction(fetchServiceTemplateAnsiblePlaybooksUrl);
     fetchTransformationPlansAction({
       url: fetchTransformationPlansUrl,
       archived: false
@@ -432,6 +435,11 @@ Overview.propTypes = {
   fetchNetworksUrl: PropTypes.string,
   fetchNetworksAction: PropTypes.func,
   fetchDatastoresUrl: PropTypes.string,
-  fetchDatastoresAction: PropTypes.func
+  fetchDatastoresAction: PropTypes.func,
+  fetchServiceTemplateAnsiblePlaybooksUrl: PropTypes.string,
+  fetchServiceTemplateAnsiblePlaybooksAction: PropTypes.func,
+  serviceTemplatePlaybooks: PropTypes.array,
+  isFetchingServiceTemplatePlaybooks: PropTypes.bool,
+  isRejectedServiceTemplatePlaybooks: PropTypes.bool
 };
 export default Overview;
